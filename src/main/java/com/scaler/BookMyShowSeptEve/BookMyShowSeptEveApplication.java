@@ -27,6 +27,9 @@ public class BookMyShowSeptEveApplication implements CommandLineRunner {
 		UserSignupResponseDTO signUpResponseDTO = userController.signup(signUpRequestDTO);
 
 		System.out.println(signUpResponseDTO.getMessage());
+
+		// Hard coded running
+		// Create bookingRequestDTo -> Call BookingController -> Catch and print the responseDTO
 	}
 }
 

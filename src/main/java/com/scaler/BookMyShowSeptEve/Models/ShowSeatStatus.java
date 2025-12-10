@@ -1,5 +1,5 @@
 package com.scaler.BookMyShowSeptEve.Models;
 
-public enum SeatStatus {
+public enum ShowSeatStatus {
     BOOKED, AVAILABLE, BLOCKED
 }

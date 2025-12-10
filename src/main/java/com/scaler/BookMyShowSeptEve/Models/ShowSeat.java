@@ -20,7 +20,7 @@ public class ShowSeat extends BaseModel {
     @ManyToOne
     private  Seat seat; // seatType
     @Enumerated(EnumType.ORDINAL)
-    private SeatStatus seatStatus;
+    private ShowSeatStatus status;
     private Date blockedAt;
 
     public Date getBlockedAt() {
@@ -47,12 +47,15 @@ public class ShowSeat extends BaseModel {
         this.seat = seat;
     }
 
-    public SeatStatus getSeatStatus() {
-        return seatStatus;
+    public ShowSeatStatus getStatus() {
+        return status;
     }
 
-    public void setSeatStatus(SeatStatus seatStatus) {
-        this.seatStatus = seatStatus;
+    public void setStatus(ShowSeatStatus status) {
+        this.status = status;
+        if(status.equals(ShowSeatStatus.BLOCKED)){
+            setBlockedAt(new Date());
+        }
     }
 }
 
