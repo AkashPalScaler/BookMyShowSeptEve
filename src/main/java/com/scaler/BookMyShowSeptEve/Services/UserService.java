@@ -36,3 +36,6 @@ public class UserService {
 }
 // HW: Login -> Check if user exists, if not throw err and ask to signup
 // If user exists, match the password and then throw success -> create a session DB and return the sessionToken
+
+// Agenda-
+// Write bookingTicket DTOs -> booking controller -> booking service and logic for handling concurrent ticket bookings
